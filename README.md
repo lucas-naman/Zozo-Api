@@ -1,8 +1,10 @@
-# Zozo-Api
-Api for my flutter application
+# REST API With Flask & SQL Alchemy
 
-# Quick Start Using Pipenv
+> Products API using Python Flask, SQL Alchemy and Marshmallow
 
+## Quick Start Using Pipenv
+
+``` bash
 # Activate venv
 $ pipenv shell
 
@@ -17,3 +19,12 @@ $ python
 
 # Run Server (http://localhst:5000)
 python app.py
+```
+
+## Endpoints
+
+* GET     /product
+* GET     /product/:id
+* POST    /product
+* PUT     /product/:id
+* DELETE  /product/:id
