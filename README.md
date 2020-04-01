@@ -1,30 +1,48 @@
-# REST API With Flask & SQL Alchemy
+# REST API With Flask & Google Datastore & Google App Engine
 
-> Products API using Python Flask, SQL Alchemy and Marshmallow
+> Api For Flutter App: MyFlutterApp.github.com
 
-## Quick Start Using Pipenv
+## Quick Start Using Venv
 
 ``` bash
-# Activate venv
-$ pipenv shell
+# Create a Google Cloud Project
+https://cloud.google.com/appengine/docs/standard/python3/building-app/creating-gcp-project
+
+# Connect SDK To Google to access DataBase
+$ gcloud auth application-default login
+
+# Create an isolated Python environment in a directory external to your project and activate it:
+$ python3 -m venv env
+$ source env/bin/activate
 
 # Install dependencies
-$ pipenv install
+$ pip install  -r requirements.txt
 
-# Create DB
-$ python
->> from app import db
->> db.create_all()
->> exit()
+# Run Server (http://localhost:8080)
+python main.py
+```
 
-# Run Server (http://localhst:5000)
-python app.py
+## Deploy On Google App Engine
+
+``` bash
+# Create a Google Cloud Project
+https://cloud.google.com/appengine/docs/standard/python3/building-app/creating-gcp-project
+
+# Connect SDK To Google 
+$ gcloud auth application-default login
+
+# Deploy App
+$ gcloud app deploy
+
+# Go To Url
+$ gcloud app browse
+
 ```
 
 ## Endpoints
 
-* GET     /product
-* GET     /product/:id
-* POST    /product
-* PUT     /product/:id
-* DELETE  /product/:id
+* GET     /bday
+* GET     /bday/:id
+* POST    /bday
+* PUT     /bday/:id
+* DELETE  /bday/:id
